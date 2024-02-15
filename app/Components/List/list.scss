@@ -95,7 +95,7 @@ $semi-accent:#08A8ED;
             gap:10px;
             #task-container{
                 width:70vw;
-                min-width: 500px;
+                // min-width: 500px;
                 height:7vh;
                 min-height: 40px;
                 background-color: $main-accent;
@@ -125,4 +125,24 @@ $semi-accent:#08A8ED;
     }
 
 
+}
+
+
+@media screen and (max-width: 1100px){
+    #main{
+        overflow: hidden;
+        #profile-container{
+           font-size: 16px; 
+           height:40px;
+        }
+    
+        #body-container{
+            #body-list{
+                #task-container{
+                    width:330px;
+                    height:25px;
+                }
+            }
+        }
+    }
 }
