@@ -1,0 +1,93 @@
+#main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: #050921;
+  font-family: sans-serif;
+}
+#main #side-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5vw;
+  min-width: 50px;
+  height: 100vh;
+  position: relative;
+  gap: 10px;
+  background-color: #212E5D;
+}
+#main #side-container #group {
+  background-color: #08A8ED;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main #side-container #group:hover {
+  transform: scale(1.05);
+}
+#main #profile-container {
+  width: 16vw;
+  height: 7vh;
+  color: white;
+  font-size: 1.3vw;
+  min-height: 30px;
+  min-width: 160px;
+  border-radius: 12px;
+  background-color: #212E5D;
+  position: absolute;
+  top: 5%;
+  right: 2.5%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main #body-container {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+}
+#main #body-container #body-header {
+  margin-top: 20vh;
+  font-size: 3rem;
+}
+#main #body-container #body-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#main #body-container #body-list #task-container {
+  width: 70vw;
+  min-width: 500px;
+  height: 7vh;
+  min-height: 40px;
+  background-color: #212E5D;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  justify-content: center;
+}
+#main #add {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #08A8ED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  cursor: pointer;
+}/*# sourceMappingURL=list.css.map */
