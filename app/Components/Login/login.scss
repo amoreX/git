@@ -48,16 +48,16 @@ $my-blue:#08A8ED;
         }
 
     }
+    #load{
+        animation:load 1s infinite linear;
+    }
     #goog{
         transition:0.68s ease-in-out;
         position:absolute;
         // left:50%;
         bottom:-5%;
         rotate:90deg;
-        opacity:0;
-
-        
-
+        opacity:0;  
     }
 
 }
@@ -86,4 +86,13 @@ $my-blue:#08A8ED;
 
     }
 
-}   
+}  
+
+@keyframes load{
+    0%{
+        rotate:0deg;
+    }
+    100%{
+        rotate:360deg;
+    }
+}

@@ -5,7 +5,14 @@ import {signIn,signOut,useSession} from "next-auth/react"
 import {motion} from 'framer-motion'
 
 
-export default function Signin(){
+export default function Signin({isload}){
+
+    const handleOnclick=()=>{
+        isload();
+        setTimeout(() => {
+            signIn("google", { callbackUrl: "/Components/List" });
+        }, 2000);
+    };
     return(
         <motion.div 
         id="google"
@@ -26,7 +33,7 @@ export default function Signin(){
             opacity:1
         }}
 
-        onClick={()=>signIn("google",{callbackUrl:"/Components/List"})}
+        onClick={()=>handleOnclick()}
 
         >
             Sign in with google
