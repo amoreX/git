@@ -18,8 +18,7 @@ export default   function List(){
 
     return(
         <div id="main">
-            {/* {session?.user?.name}
-            <button onClick={()=>signOut({callbackUrl:"/"})}>sign out</button> */}
+           
             <Sidebar></Sidebar>
             <Body></Body>
             <Profile></Profile>
