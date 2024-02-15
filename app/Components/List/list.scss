@@ -37,6 +37,7 @@ $semi-accent:#08A8ED;
             align-items: center;
             &:hover{
                 transform:scale(1.05);
+                box-shadow: 0px 0px 7px $semi-accent;
             }
 
         }
@@ -74,6 +75,17 @@ $semi-accent:#08A8ED;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        #profile-pic{
+            #picture{
+                margin-top: 15%;
+                margin-bottom: auto;
+                width:2.5vw;
+                min-width:30px;
+                height:auto;
+                border-radius: 50%;
+            }
+        }
     }
 
     #body-container{
@@ -102,7 +114,19 @@ $semi-accent:#08A8ED;
                 display: flex;
                 align-items: center;
                 border-radius: 7px;
-                justify-content: center;
+                justify-content:flex-start;
+                transition:0.27s ease-in-out;
+                #check{
+                    width:20px;
+                    height:20px;
+                    border:solid 2px $semi-accent;
+                    border-radius: 3px;
+                    margin-left: 10px;
+                    cursor:pointer;
+                }
+                #task{
+                    margin-left: 10px;
+                }
                 
             }
         }

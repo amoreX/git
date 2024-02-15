@@ -30,6 +30,7 @@
 }
 #main #side-container #group:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0px 7px #08A8ED;
 }
 #main #side-container #sign-out {
   position: absolute;
@@ -62,6 +63,14 @@
   justify-content: space-evenly;
   align-items: center;
 }
+#main #profile-container #profile-pic #picture {
+  margin-top: 15%;
+  margin-bottom: auto;
+  width: 2.5vw;
+  min-width: 30px;
+  height: auto;
+  border-radius: 50%;
+}
 #main #body-container {
   color: white;
   width: 100%;
@@ -88,7 +97,19 @@
   display: flex;
   align-items: center;
   border-radius: 7px;
-  justify-content: center;
+  justify-content: flex-start;
+  transition: 0.27s ease-in-out;
+}
+#main #body-container #body-list #task-container #check {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #08A8ED;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#main #body-container #body-list #task-container #task {
+  margin-left: 10px;
 }
 #main #add {
   position: absolute;
