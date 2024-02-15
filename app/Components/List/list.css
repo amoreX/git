@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   width: 5vw;
-  min-width: 50px;
+  min-width: 56px;
   height: 100vh;
   position: relative;
   gap: 10px;
@@ -30,6 +30,21 @@
 }
 #main #side-container #group:hover {
   transform: scale(1.05);
+}
+#main #side-container #sign-out {
+  position: absolute;
+  bottom: 3%;
+  background-color: #08A8ED;
+  border-radius: 6px;
+  border: 0px solid black;
+  transition: 0.38s ease-in-out;
+  color: white;
+  cursor: pointer;
+  padding: 3px;
+  padding-inline: 5px;
+}
+#main #side-container #sign-out:hover {
+  box-shadow: 0px 0px 5px #08A8ED;
 }
 #main #profile-container {
   width: 16vw;
