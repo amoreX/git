@@ -28,7 +28,7 @@ export default function List() {
 			<Sidebar check={ismobile} mobile={handleIsMobile}></Sidebar>
 			<Body></Body>
 			<Profile></Profile>
-			<Add></Add>
+			<Add check={ismobile} mobile={handleIsMobile}></Add>
 		</div>
 	);
 }
