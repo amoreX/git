@@ -3,7 +3,13 @@
 import { motion } from "framer-motion";
 
 export default function Modal({ check, set }) {
+
+	const handleClick=()=>{
+		set();
+	}
 	return check == true ? (
+		<div id="modal-original">
+			
 		<motion.div
 			id="modal-container"
 			initial={{
@@ -19,7 +25,8 @@ export default function Modal({ check, set }) {
 				opacity: 1,
 				scale: 1,
 			}}
-		>
+			onClick={()=>handleClick()}
+		></motion.div>
 			<motion.div
 				id="modal"
 				initial={{
@@ -41,7 +48,8 @@ export default function Modal({ check, set }) {
 				<input type="text" placeholder="Enter task"></input>
 				<div id="button">Add</div>
 			</motion.div>
-		</motion.div>
+		
+		</div>
 	) : (
 		<div></div>
 	);
