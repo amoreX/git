@@ -184,29 +184,28 @@ $semi-accent:#08A8ED;
             min-width: 300px;
             min-height:70px;
             width:40vw;
-            height:30vh;
+            height:20vh;
             background-color: #050921;
             border: 1px solid $main-accent;
             border-radius: 10px;
             display: flex;
-            flex-direction: column;
+            gap:10px;
+            // flex-direction: column;
             justify-content: center;
             position: relative;
             align-items: center;
             input{
-                min-width: 250px;
+                // min-width: 250px;
                 width:30vw;
                 height:5vh;
                 background-color: #212E5D;
                 border: 0px solid black;
+                color:white;
                 &:focus{
                     outline:none;
                     border: 1px solid #08A8ED;
                 }
 
-                ::placeholder{
-                        color:black;
-                }
             }
 
             #button{
@@ -215,10 +214,10 @@ $semi-accent:#08A8ED;
                 background-color: #08A8ED;
                 padding:5px;
                 padding-inline: 10px;
-                position: absolute;
-                right:7%;
                 border-radius: 5px;
-                bottom:15%;
+                // position: absolute;
+                // right:7%;
+                // bottom:15%;
             }
         }
     }
@@ -231,13 +230,6 @@ $semi-accent:#08A8ED;
     #main{
         overflow: hidden;
 
-
-        // #burger{
-        //     visibility: visible;
-        // }
-        // #side-container{
-        //     visibility: hidden;
-        // }
         #profile-container{
            font-size: 16px; 
            height:40px;
@@ -248,6 +240,16 @@ $semi-accent:#08A8ED;
                 #task-container{
                     width:330px;
                     height:25px;
+                }
+            }
+        }
+
+        #modal-container{
+            #modal{
+                height:100px;
+
+                input{
+                    width:200px;
                 }
             }
         }

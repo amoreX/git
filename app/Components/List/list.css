@@ -159,32 +159,26 @@
   min-width: 300px;
   min-height: 70px;
   width: 40vw;
-  height: 30vh;
+  height: 20vh;
   background-color: #050921;
   border: 1px solid #212E5D;
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   justify-content: center;
   position: relative;
   align-items: center;
 }
 #main #modal-container #modal input {
-  min-width: 250px;
   width: 30vw;
   height: 5vh;
   background-color: #212E5D;
   border: 0px solid black;
+  color: white;
 }
 #main #modal-container #modal input:focus {
   outline: none;
   border: 1px solid #08A8ED;
-}
-#main #modal-container #modal input ::-moz-placeholder {
-  color: black;
-}
-#main #modal-container #modal input ::placeholder {
-  color: black;
 }
 #main #modal-container #modal #button {
   width: -moz-fit-content;
@@ -194,10 +188,7 @@
   background-color: #08A8ED;
   padding: 5px;
   padding-inline: 10px;
-  position: absolute;
-  right: 7%;
   border-radius: 5px;
-  bottom: 15%;
 }
 
 @media screen and (max-width: 1100px) {
@@ -211,5 +202,11 @@
   #main #body-container #body-list #task-container {
     width: 330px;
     height: 25px;
+  }
+  #main #modal-container #modal {
+    height: 100px;
+  }
+  #main #modal-container #modal input {
+    width: 200px;
   }
 }/*# sourceMappingURL=list.css.map */
