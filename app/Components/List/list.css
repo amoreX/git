@@ -157,7 +157,7 @@
 }
 #main #modal-container #modal {
   min-width: 300px;
-  min-height: 100px;
+  min-height: 70px;
   width: 40vw;
   height: 30vh;
   background-color: #050921;
