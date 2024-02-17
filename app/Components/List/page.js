@@ -7,19 +7,25 @@ import Sidebar from "./ComP/sidebar";
 import Profile from "./ComP/Profile";
 import Body from "./ComP/body";
 import Add from "./ComP/Add";
+import Modal from "./ComP/Addmodal";
 import Burger from "./ComP/Burger";
 import { useState, useEffect } from "react";
 
 export default function List() {
 	const { data: session } = useSession();
+	const [ismobile, setIsmobile] = useState(true);
+	const [isadd, setIsadd] = useState(false);
+
 	useEffect(() => {
 		console.log(session);
 	}, [session]);
 
-	const [ismobile, setIsmobile] = useState(true);
-
 	const handleIsMobile = () => {
 		setIsmobile(!ismobile);
+	};
+
+	const handleIsadd = () => {
+		setIsadd(!isadd);
 	};
 
 	return (
@@ -28,7 +34,8 @@ export default function List() {
 			<Sidebar check={ismobile} mobile={handleIsMobile}></Sidebar>
 			<Body></Body>
 			<Profile></Profile>
-			<Add check={ismobile} mobile={handleIsMobile}></Add>
+			<Add check={ismobile} mobile={handleIsMobile} set={handleIsadd} checkmodal={isadd}></Add>
+			<Modal check={isadd} set={handleIsadd}></Modal>
 		</div>
 	);
 }

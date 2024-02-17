@@ -165,6 +165,62 @@ $semi-accent:#08A8ED;
         align-items: center;
         font-size: 27px;
         cursor:pointer;
+        z-index: 4;
+    }
+
+    #modal-container{
+        position:absolute;
+        height:100vh;
+        width:100vw;
+        z-index: 3;
+        backdrop-filter: blur(10px);
+        background-color: #05092124;
+        color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #modal{
+            min-width: 300px;
+            min-height:100px;
+            width:40vw;
+            height:30vh;
+            background-color: #050921;
+            border: 1px solid $main-accent;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            input{
+                min-width: 250px;
+                width:30vw;
+                height:5vh;
+                background-color: #212E5D;
+                border: 0px solid black;
+                &:focus{
+                    outline:none;
+                    border: 1px solid #08A8ED;
+                }
+
+                ::placeholder{
+                        color:black;
+                }
+            }
+
+            #button{
+                width:fit-content;
+                height:fit-content;
+                background-color: #08A8ED;
+                padding:5px;
+                padding-inline: 10px;
+                position: absolute;
+                right:7%;
+                border-radius: 5px;
+                bottom:15%;
+            }
+        }
     }
 
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Add({ check, mobile }) {
+export default function Add({ check, mobile,set,checkmodal }) {
 	const cross = (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,13 @@ export default function Add({ check, mobile }) {
 	);
 
 	const handleClick = () => {
-		mobile();
+		if (check == true){
+			set();
+		}
+		else{
+			mobile();
+
+		}
 	};
 	return (
 		<motion.div
@@ -45,7 +51,7 @@ export default function Add({ check, mobile }) {
 			}}
 			onClick={()=>handleClick()}
 		>
-			{check == true ? "+" : cross}
+			{check == true ? checkmodal==true? cross : "+" : cross}
 		</motion.div>
 	);
 }
