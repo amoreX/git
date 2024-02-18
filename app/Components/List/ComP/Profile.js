@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
+import { signOut } from "next-auth/react";
 import { useEffect } from "react";
 
 export default function Profile() {
@@ -27,6 +28,8 @@ export default function Profile() {
 				scale: 1,
 				opacity: 1,
 			}}
+
+			onClick={() => signOut({ callbackUrl: "/" })}
 		>
 			<div id="profile-pic"><img id="picture" src={session?.user?.image} /></div>
 
