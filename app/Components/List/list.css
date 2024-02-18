@@ -208,6 +208,25 @@
   padding-inline: 10px;
   border-radius: 5px;
 }
+@media screen and (max-width: 1100px) {
+  .theme-1 #main {
+    overflow: hidden;
+  }
+  .theme-1 #main #profile-container {
+    font-size: 16px;
+    height: 40px;
+  }
+  .theme-1 #main #body-container #body-list #task-container {
+    width: 330px;
+    height: 25px;
+  }
+  .theme-1 #main #modal-original #modal {
+    height: 100px;
+  }
+  .theme-1 #main #modal-original #modal input {
+    width: 200px;
+  }
+}
 
 .theme-2 #main {
   height: 100vh;
@@ -419,6 +438,25 @@
   padding-inline: 10px;
   border-radius: 5px;
 }
+@media screen and (max-width: 1100px) {
+  .theme-2 #main {
+    overflow: hidden;
+  }
+  .theme-2 #main #profile-container {
+    font-size: 16px;
+    height: 40px;
+  }
+  .theme-2 #main #body-container #body-list #task-container {
+    width: 330px;
+    height: 25px;
+  }
+  .theme-2 #main #modal-original #modal {
+    height: 100px;
+  }
+  .theme-2 #main #modal-original #modal input {
+    width: 200px;
+  }
+}
 
 .theme-3 #main {
   height: 100vh;
@@ -629,6 +667,25 @@
   padding: 5px;
   padding-inline: 10px;
   border-radius: 5px;
+}
+@media screen and (max-width: 1100px) {
+  .theme-3 #main {
+    overflow: hidden;
+  }
+  .theme-3 #main #profile-container {
+    font-size: 16px;
+    height: 40px;
+  }
+  .theme-3 #main #body-container #body-list #task-container {
+    width: 330px;
+    height: 25px;
+  }
+  .theme-3 #main #modal-original #modal {
+    height: 100px;
+  }
+  .theme-3 #main #modal-original #modal input {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
