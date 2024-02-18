@@ -9,6 +9,7 @@ import Body from "./ComP/body";
 import Add from "./ComP/Add";
 import Modal from "./ComP/Addmodal";
 import Burger from "./ComP/Burger";
+import Theme from "./ComP/Theme";
 import { useState, useEffect } from "react";
 
 export default function List() {
@@ -31,6 +32,7 @@ export default function List() {
 	return (
 		<div id="main">
 			<Burger check={ismobile} mobile={handleIsMobile}></Burger>
+			<Theme check={ismobile}></Theme>
 			<Sidebar check={ismobile} mobile={handleIsMobile}></Sidebar>
 			<Body></Body>
 			<Profile></Profile>

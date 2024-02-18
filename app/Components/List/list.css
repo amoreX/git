@@ -6,6 +6,7 @@
   font-family: sans-serif;
 }
 #main #burger {
+  fill: #08A8ED;
   position: absolute;
   z-index: 2;
   width: 50px;
@@ -16,8 +17,22 @@
   align-items: center;
   border: 1px solid #08A8ED;
   border-radius: 10px;
-  top: 2%;
+  top: 4.5%;
   left: 1%;
+  cursor: pointer;
+}
+#main #theme {
+  position: absolute;
+  fill: #08A8ED;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  left: 1%;
+  bottom: 5%;
   cursor: pointer;
 }
 #main #side-container {
@@ -46,21 +61,6 @@
 #main #side-container #group:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 7px #08A8ED;
-}
-#main #side-container #sign-out {
-  position: absolute;
-  bottom: 5%;
-  background-color: #212E5D;
-  border-radius: 6px;
-  border: 0px solid black;
-  transition: 0.38s ease-in-out;
-  color: white;
-  cursor: pointer;
-  padding: 3px;
-  padding-inline: 5px;
-}
-#main #side-container #sign-out:hover {
-  box-shadow: 0px 0px 5px #08A8ED;
 }
 #main #profile-container {
   width: 14vw;
@@ -118,10 +118,16 @@
 #main #body-container #body-list #task-container #check {
   width: 20px;
   height: 20px;
+  position: relative;
   border: solid 2px #08A8ED;
   border-radius: 3px;
   margin-left: 10px;
   cursor: pointer;
+}
+#main #body-container #body-list #task-container #check #check-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #08A8ED;
 }
 #main #body-container #body-list #task-container #task {
   margin-left: 10px;

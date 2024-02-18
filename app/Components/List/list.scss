@@ -1,6 +1,29 @@
-$bg-color:#050921;
-$main-accent:#212E5D;
-$semi-accent:#08A8ED;
+
+$theme-number:1;
+$theme-bg-color:(
+    1: #050921,
+    2:#181D30,
+    3:#191D27,
+
+);
+
+$theme-main-accent:(
+    1:#212E5D,
+    2:#541B2E,
+    3:#122B43,
+
+);
+
+$theme-semi-accent:(
+    1:#08A8ED,
+    2: #AB1727,
+    3:#01BB88,
+
+    
+);
+$bg-color:map-get($theme-bg-color, $theme-number);
+$main-accent:map-get($theme-main-accent, $theme-number);
+$semi-accent:map-get($theme-semi-accent, $theme-number);
 
 
 
@@ -13,20 +36,38 @@ $semi-accent:#08A8ED;
     font-family: sans-serif;
 
     #burger{
+        fill: $semi-accent;
         position:absolute;
         z-index:2;
         width:50px;
         height:50px;
-        background-color: #050921;
+        background-color: $bg-color;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid $semi-accent;
         border-radius: 10px;
-        top:2%;
+        top:4.5%;
         left:1%;
         cursor:pointer;
         // visibility:hidden;
+    }
+
+    #theme{
+        position:absolute;
+        fill:$semi-accent;
+        z-index:2;
+        width:50px;
+        height:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid $semi-accent;
+        border-radius: 10px;
+        left:1%;
+        bottom:5%;
+        cursor: pointer;
+        
     }
 
 
@@ -61,22 +102,7 @@ $semi-accent:#08A8ED;
 
         }
 
-        #sign-out{
-            position:absolute;
-            bottom:5%;
-            background-color: $main-accent; 
-            border-radius: 6px;
-            border:0px  solid black;
-            transition:0.38s ease-in-out;
-            color:white;
-            cursor:pointer;
-            padding: 3px;
-            padding-inline: 5px;
-
-            &:hover{
-                box-shadow: 0px 0px 5px $semi-accent;
-            }
-        }
+        
     }
 
     #profile-container{
@@ -138,10 +164,17 @@ $semi-accent:#08A8ED;
                 #check{
                     width:20px;
                     height:20px;
+                    position:relative;
                     border:solid 2px $semi-accent;
                     border-radius: 3px;
                     margin-left: 10px;
                     cursor:pointer;
+
+                    #check-bg{
+                        width:100%;
+                        height:100%;
+                        background-color: $semi-accent;
+                    }
                 }
                 #task{
                     margin-left: 10px;
@@ -196,7 +229,7 @@ $semi-accent:#08A8ED;
             min-height:70px;
             width:40vw;
             height:20vh;
-            background-color: #050921;
+            background-color: $bg-color;
             border: 1px solid $main-accent;
             border-radius: 10px;
             display: flex;
@@ -212,7 +245,7 @@ $semi-accent:#08A8ED;
                 // min-width: 250px;
                 width:30vw;
                 height:5vh;
-                background-color: #212E5D;
+                background-color: $main-accent;
                 border: 0px solid black;
                 color:white;
                 &:focus{
@@ -225,7 +258,7 @@ $semi-accent:#08A8ED;
             #button{
                 width:fit-content;
                 height:fit-content;
-                background-color: #08A8ED;
+                background-color: $semi-accent;
                 padding:5px;
                 padding-inline: 10px;
                 border-radius: 5px;
@@ -270,3 +303,4 @@ $semi-accent:#08A8ED;
 
     }
 }
+

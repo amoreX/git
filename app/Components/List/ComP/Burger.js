@@ -8,7 +8,6 @@ export default function Burger({ check, mobile }) {
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			xmlnsXlink="http://www.w3.org/1999/xlink"
-			fill="#08A8ED"
 			width="40px"
 			height="40px"
 			viewBox="0 0 100 100"

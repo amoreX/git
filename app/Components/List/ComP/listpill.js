@@ -14,9 +14,10 @@ export default function Listpill() {
         >
 			<div
 				id="check"
-				style={{ backgroundColor: check == false ? "#212E5D" : "#08A8ED" }}
 				onClick={() => handleCheck()}
-			></div>
+			>
+				<div id="check-bg" style={{ opacity: check == false ? 0 : 1 }}></div>
+			</div>
 			<div id="task">i dont know</div>
 		</div>
 	);
