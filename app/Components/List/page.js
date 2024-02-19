@@ -16,13 +16,13 @@ import { Data } from "@/app/Utils/Data";
 import { json } from "react-router";
 
 export default function List() {
-	const [group, setGroup] = useState(0);
+	const [tasks, setTasks] = useState({});
 	const [actualdata, setActualdata] = useState({});
 	const { data: session } = useSession();
 	const [ismobile, setIsmobile] = useState(true);
 	const [isadd, setIsadd] = useState(false);
 	const [theme, setTheme] = useState("theme-1");
-
+	const [change,setChange]=useState(false);
 	useEffect(() => {
 		console.log(session);
 
@@ -32,11 +32,16 @@ export default function List() {
 				await Check(session?.user?.email);
 				const pp = await Data(session?.user?.email);
 				setActualdata(JSON.parse(pp));
-				// console.log(JSON.parse(pp));
 			};
 			gettingdata();
 		}
-	}, [session]);
+	}, [session,change]);
+	const handleuwu=()=>{
+		setChange(!change);
+	}
+	useEffect(() => {
+		setTasks(actualdata);
+	}, [actualdata]);
 
 	const handleIsMobile = () => {
 		setIsmobile(!ismobile);
@@ -64,10 +69,10 @@ export default function List() {
 				{/* <Burger check={ismobile} mobile={handleIsMobile}></Burger> */}
 				<Theme check={ismobile} changetheme={handleTheme}></Theme>
 				{/* <Sidebar check={ismobile} mobile={handleIsMobile}></Sidebar> */}
-				{actualdata && <Body datta={actualdata}></Body>}
+				{tasks && <Body datta={tasks} uwu={handleuwu}></Body>}
 				<Profile></Profile>
 				<Add check={ismobile} mobile={handleIsMobile} set={handleIsadd} checkmodal={isadd}></Add>
-				<Modal check={isadd} set={handleIsadd}></Modal>
+				<Modal check={isadd} set={handleIsadd} uwu={handleuwu}></Modal>
 			</div>
 		</div>
 	);

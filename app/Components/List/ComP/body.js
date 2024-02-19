@@ -3,7 +3,14 @@ import Task from "./listpill";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 export default function Body({ datta }) {
-	console.log(datta);
+	// console.log(datta.groups);
+	const [lists, setLists] = useState([]);
+	useEffect(() => {
+		if (datta.tasks) {
+			setLists(datta.tasks.slice(1));
+			console.log(datta.tasks.slice(1));
+		}
+	}, [datta]);
 	// const p=datta.groups[0].tasks;
 
 	return (
@@ -35,7 +42,7 @@ export default function Body({ datta }) {
 					opacity: 0,
 				}}
 				transition={{
-					delay: 0.65,
+					delay: 1.65,
 					type: "tween",
 					ease: "easeInOut",
 					duration: 0.68,
@@ -45,7 +52,9 @@ export default function Body({ datta }) {
 					opacity: 1,
 				}}
 			>
-				<Task></Task>
+				{lists.map((list, index) => (
+					<Task key={index} data={list}></Task>
+				))}
 			</motion.div>
 		</div>
 	);

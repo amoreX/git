@@ -12,7 +12,7 @@ export async function Check(id) {
 	try {
 		const user = await User.findOne({ email: id });
 		if (!user) {
-			await User.create({ email: id, groups: [{ name: "Daily", tasks: [{}] }] });
+			await User.create({ email: id,  name: "Tasks", tasks: [{}] });
 		}
 	} catch (err) {
 		console.log("kys");

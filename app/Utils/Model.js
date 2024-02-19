@@ -2,17 +2,13 @@ import mongoose from "mongoose";
 const UserSchema = new mongoose.Schema(
 	{
 		email: String,
-		groups: [
-			{
-				name: String,
+		name: String,
 				tasks: [
 					{
 						taskname: String,
 						taskstatus: Boolean,
 					},
 				],
-			},
-		],
 	},
 	{ collection: "users" }
 );
