@@ -1,8 +1,11 @@
 "use client";
-
 import Task from "./listpill";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-export default function Body() {
+export default function Body({ datta }) {
+	console.log(datta);
+	// const p=datta.groups[0].tasks;
+
 	return (
 		<div id="body-container">
 			<motion.div
@@ -22,7 +25,7 @@ export default function Body() {
 					y: 0,
 				}}
 			>
-				Daily
+				Tasks
 			</motion.div>
 
 			<motion.div
@@ -42,8 +45,6 @@ export default function Body() {
 					opacity: 1,
 				}}
 			>
-				<Task></Task>
-				<Task></Task>
 				<Task></Task>
 			</motion.div>
 		</div>
