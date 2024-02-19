@@ -7,9 +7,9 @@ import { useRouter } from "next/router";
 export default function Home() {
 	// const router = useRouter();
 	const { data: session } = useSession();
-	// if (session && session.user) {
-	// 	redirect("/Components/List");
-	// }
+	if (session && session.user) {
+		redirect("/Components/List");
+	}
 
 	return (
 		<main>
