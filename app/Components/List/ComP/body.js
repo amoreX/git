@@ -34,7 +34,15 @@ export default function Body({ datta }) {
 			>
 				Tasks
 			</motion.div>
-
+			{/* {lists.length < 1 ? (
+				<motion.div
+					intial={{ opacity: 0, scale: 0.1 }}
+					transition={{ type: "tween", ease: "easeInOut", duration: 0.38 }}
+					animate={{ opacity: 1, scale: 1 }}
+				>
+					add task
+				</motion.div>
+			) : null} */}
 			<motion.div
 				id="body-list"
 				initial={{
@@ -42,7 +50,7 @@ export default function Body({ datta }) {
 					opacity: 0,
 				}}
 				transition={{
-					delay: 1.65,
+					delay: 0.1,
 					type: "tween",
 					ease: "easeInOut",
 					duration: 0.68,
